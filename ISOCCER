@@ -1,0 +1,218 @@
+package Introducao;
+
+/**
+ *
+ * @author sando
+ */
+import java.util.Scanner;
+public class ISOCCER_1 
+{
+    //PRESIDENTE
+    static String nome_presidente,nome_medico,nome_tecnico;           
+    static String email_presidente,email_medico,email_tecnico;             
+    static int cpf_presidente,cpf_medico,crm_medico,cpf_tecnico;
+    static float salario_presidente,salario_medico,salario_tecnico;
+    static int telefone_presidente,telefone_medico,telefone_tecnico;
+    
+    //PREPARADOR
+    static String [] nome_preparador = new String[100];
+    static String [] email_preparador = new String[100];
+    static int [] cpf_preparador = new int[100];
+    static float [] salario_preparador = new float[100];
+    static int [] telefone_preparador = new int[100];
+    static int i_array_prepar=0;
+    
+    //MOTORISTA
+    static String [] nome_motorista = new String[100];
+    static String [] email_motorista = new String[100];
+    static int [] cpf_motorista = new int[100];
+    static float [] salario_motorista = new float[100];
+    static int [] habilitacao_motorista = new int[100];
+    static int [] telefone_motorista = new int[100];
+    static int i_array_moto=0;
+    
+    //COZINHEIRO
+    static String [] nome_cozinheiro = new String[100];
+    static String [] email_cozinheiro = new String[100];
+    static int [] cpf_cozinheiro = new int[100];
+    static float [] salario_cozinheiro = new float[100];
+    static int [] telefone_cozinheiro = new int[100];
+    static int i_array_cozinheiro=0;
+    
+    public static void main(String[] args)
+    {
+        //verificacao_email();
+        Scanner input = new Scanner(System.in);        
+        System.out.println("ESCOLHA UMA DAS OPCOES A SEGUIR:");
+        System.out.println("SAIR - 0");
+        System.out.println("ADICIONAR FUNCIONARIOS - 1");
+        System.out.println("RECURSOS FISICOS - 2");
+        System.out.println("SÓCIO TORCEDOR - 3");
+        System.out.println("SOLICITAR RELATÓRIOS - 4");
+        int opcao = input.nextInt();  
+        
+        while(opcao != 0)
+        {            
+            if(opcao == 1)
+            {
+                funcionario();
+            }
+            else if(opcao == 2)
+            {
+                //recursos_fisicos();
+            }
+            else if(opcao == 3)
+            {
+                //socio_torcedor();            
+            }
+            else if(opcao == 4)
+            {
+                
+            }
+            opcao = input.nextInt();
+        }
+    }
+    public static void verificacao_email()
+    {
+        String login = "sporting";
+        String senha = "farol";
+        Scanner input = new Scanner(System.in);
+        int stop = 0;
+        while(stop != 1)
+        {
+            System.out.println("DIGITE O LOGIN:");
+            String login_usuario = input.next();
+            System.out.println("DIGITE A SENHA:");
+            String senha_usuario = input.next();
+            
+            if(login_usuario.equals( login ) && senha_usuario.equals( senha ))
+            {
+                System.out.println("LOGIN E SENHA CORRETOS");
+                System.out.println();
+                stop = 1;   
+            }
+            else
+            {
+                System.out.println("LOGIN E SENHA INCORRETOS, FAVOR DIGITE NOVAMENTE");
+            }
+        }      
+    }
+    int indice = 0;
+    public static void funcionario()
+    {  
+        Scanner input = new Scanner(System.in);
+        System.out.println("QUANTOS FUNCIONARIOS VOCÊ DESEJA ADICIONAR");
+        int num_funci = input.nextInt();
+        int i;
+        for(i = 0; i < num_funci; i++)
+        {
+            System.out.println("ESCOLHA O CARGO DO FUNCIONARIO");
+            System.out.println("PRESIDENTE - 1");
+            System.out.println("MÉDICO - 2");
+            System.out.println("TÉCNICO - 3");
+            System.out.println("PREPARADOR FÍSICO - 4");
+            System.out.println("MOTORISTA - 5");
+            System.out.println("COZINHEIRO - 6");
+            System.out.println("ADVOGADO - 7");
+            System.out.println("JOGADOR - 8");
+            System.out.println();
+            int escolha = input.nextInt();
+            if(escolha == 1)
+            {
+                System.out.println("DIGITE O NOME DO FUNCIONARIO");
+                nome_presidente = input.next();
+                System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
+                email_presidente = input.next();
+                System.out.println("DIGITE O CPF DO FUNCIONARIO");
+                cpf_presidente = input.nextInt();
+                System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
+                salario_presidente = input.nextFloat();
+                System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
+                telefone_presidente = input.nextInt();
+                System.out.println();
+            }
+            else if(escolha == 2)
+            {
+                System.out.println("DIGITE O NOME DO FUNCIONARIO");
+                nome_medico = input.next();
+                System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
+                email_medico = input.next();
+                System.out.println("DIGITE O CPF DO FUNCIONARIO");
+                cpf_medico = input.nextInt();
+                System.out.println("DIGITE O CRM DO FUNCIONARIO");
+                crm_medico = input.nextInt();
+                System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
+                salario_medico = input.nextFloat();
+                System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
+                telefone_medico = input.nextInt();
+                System.out.println();
+            }
+            else if(escolha == 3)
+            {
+                System.out.println("DIGITE O NOME DO FUNCIONARIO");
+                nome_tecnico = input.next();
+                System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
+                email_tecnico = input.next();
+                System.out.println("DIGITE O CPF DO FUNCIONARIO");
+                cpf_tecnico = input.nextInt();
+                System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
+                salario_tecnico = input.nextFloat();
+                System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
+                telefone_tecnico = input.nextInt();
+                System.out.println();
+            }
+            else if(escolha == 4)
+            {
+                System.out.println("DIGITE O NOME DO FUNCIONARIO");
+                nome_preparador[i_array_prepar] = input.next();
+                System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
+                email_preparador[i_array_prepar] = input.next();
+                System.out.println("DIGITE O CPF DO FUNCIONARIO");
+                cpf_preparador[i_array_prepar] = input.nextInt();
+                System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
+                salario_preparador[i_array_prepar] = input.nextFloat();
+                System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
+                telefone_preparador[i_array_prepar] = input.nextInt();
+                System.out.println();
+                i_array_prepar++;
+            }
+            else if(escolha == 5)
+            {
+                System.out.println("DIGITE O NOME DO FUNCIONARIO");
+                nome_motorista[i_array_moto] = input.next();
+                System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
+                email_motorista[i_array_moto] = input.next();
+                System.out.println("DIGITE O CPF DO FUNCIONARIO");
+                cpf_motorista[i_array_moto] = input.nextInt();
+                System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
+                salario_motorista[i_array_moto] = input.nextFloat();
+                System.out.println("DIGITE O NÉMERO DA HABILITAÇÃO DO FUNCIONARIO");
+                habilitacao_motorista[i_array_moto] = input.nextInt();
+                System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
+                telefone_motorista[i_array_moto] = input.nextInt();
+                System.out.println();
+                i_array_moto++;
+            }
+            else if(escolha == 6)
+            {
+                System.out.println("DIGITE O NOME DO FUNCIONARIO");
+                nome_cozinheiro[i_array_cozinheiro] = input.next();
+                System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
+                email_cozinheiro[i_array_cozinheiro] = input.next();
+                System.out.println("DIGITE O CPF DO FUNCIONARIO");
+                cpf_cozinheiro[i_array_cozinheiro] = input.nextInt();
+                System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
+                salario_cozinheiro[i_array_cozinheiro] = input.nextFloat();
+                System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
+                telefone_cozinheiro[i_array_cozinheiro] = input.nextInt();
+                System.out.println();
+                i_array_cozinheiro++;
+            }
+            else if(escolha == 7)
+            {
+                
+            }
+        }
+  
+    }
+}

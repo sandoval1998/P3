@@ -507,7 +507,7 @@ public class ISOCCER_1
             else if(opcao == 3)
             {
                 System.out.println("PARA ADICIONAR/RETIRAR ESTE RECURSO (CENTRO DE  TREINAMENTO) - 1");
-                System.out.println("VERIFICAR ESTE RECURSO (CENTRO DE  TREINAMENTO) - 3");
+                System.out.println("VERIFICAR ESTE RECURSO (CENTRO DE  TREINAMENTO) - 2");
                 int opcao_2 = input.nextInt();
                 if(opcao_2 == 1)
                 {
@@ -516,7 +516,7 @@ public class ISOCCER_1
                     centro_treinamento[1] = input.next();
                     if("sim".equals(centro_treinamento[1]))
                     {
-                        System.out.println("DETERMINE A QUANTIDADE DE DORMITÓRIOS NO CENTRO DE  TREINAMENTO - 3");
+                        System.out.println("DETERMINE A QUANTIDADE DE DORMITÓRIOS NO CENTRO DE  TREINAMENTO:");
                         centro_treinamento[2] = input.next();
                     }
                 }
@@ -526,7 +526,7 @@ public class ISOCCER_1
                     {
                         System.out.println();
                         System.out.println( "EXISTE CENTRO DE TREINAMENTO");
-                        System.out.println( "QUANTIDADE DE DORMITÓRIOS" + centro_treinamento[2]);
+                        System.out.println( "QUANTIDADE DE DORMITÓRIOS :" + centro_treinamento[2]);
                     }
                     else
                     {

@@ -109,8 +109,8 @@ public class ISOCCER_1
             System.out.println("ESCOLHA UMA DAS OPCOES A SEGUIR:");
             System.out.println("SAIR - 0");
             System.out.println("ADICIONAR FUNCIONARIOS - 1");
-            System.out.println("RECURSOS FISICOS - 2");
-            System.out.println("SÓCIO TORCEDOR - 3");
+            System.out.println("SÓCIO TORCEDOR - 2");
+            System.out.println("RECURSOS FÍSICOS - 3");
             System.out.println("SOLICITAR RELATÓRIOS - 4");
             opcao = input.nextInt();
         }
@@ -146,6 +146,7 @@ public class ISOCCER_1
         Scanner input = new Scanner(System.in);
         System.out.println("QUANTOS FUNCIONARIOS VOCÊ DESEJA ADICIONAR");
         int num_funci = input.nextInt();
+        //input.nextLine();
         int i;
         for(i = 0; i < num_funci; i++)
         {
@@ -160,10 +161,11 @@ public class ISOCCER_1
             System.out.println("JOGADOR - 8");
             System.out.println();
             int escolha = input.nextInt();
+            input.nextLine();
             if(escolha == 1)
             {
                 System.out.println("DIGITE O NOME DO FUNCIONARIO");
-                nome_presidente = input.next();
+                nome_presidente = input.nextLine();
                 System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
                 email_presidente = input.next();
                 System.out.println("DIGITE O CPF DO FUNCIONARIO");
@@ -177,7 +179,7 @@ public class ISOCCER_1
             else if(escolha == 2)
             {
                 System.out.println("DIGITE O NOME DO FUNCIONARIO");
-                nome_medico = input.next();
+                nome_medico = input.nextLine();
                 System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
                 email_medico = input.next();
                 System.out.println("DIGITE O CPF DO FUNCIONARIO");
@@ -192,22 +194,22 @@ public class ISOCCER_1
             }
             else if(escolha == 3)
             {
-                System.out.println("DIGITE O NOME DO FUNCIONARIO");
-                nome_tecnico = input.next();
-                System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
+                System.out.println("DIGITE O NOME DO TÉCNICO");
+                nome_tecnico = input.nextLine();
+                System.out.println("DIGITE O E-MAIL DO TÉCNICO");
                 email_tecnico = input.next();
-                System.out.println("DIGITE O CPF DO FUNCIONARIO");
+                System.out.println("DIGITE O CPF DO TÉCNICO");
                 cpf_tecnico = input.nextInt();
-                System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
+                System.out.println("DIGITE O SALÁRIO DO TÉCNICO");
                 salario_tecnico = input.nextFloat();
-                System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
+                System.out.println("DIGITE O TELEFONE DO TÉCNICO");
                 telefone_tecnico = input.nextInt();
                 System.out.println();
             }
             else if(escolha == 4)
             {
                 System.out.println("DIGITE O NOME DO FUNCIONARIO");
-                nome_preparador[i_array_prepar] = input.next();
+                nome_preparador[i_array_prepar] = input.nextLine();
                 System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
                 email_preparador[i_array_prepar] = input.next();
                 System.out.println("DIGITE O CPF DO FUNCIONARIO");
@@ -222,7 +224,7 @@ public class ISOCCER_1
             else if(escolha == 5)
             {
                 System.out.println("DIGITE O NOME DO FUNCIONARIO");
-                nome_motorista[i_array_moto] = input.next();
+                nome_motorista[i_array_moto] = input.nextLine();
                 System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
                 email_motorista[i_array_moto] = input.next();
                 System.out.println("DIGITE O CPF DO FUNCIONARIO");
@@ -239,7 +241,7 @@ public class ISOCCER_1
             else if(escolha == 6)
             {
                 System.out.println("DIGITE O NOME DO FUNCIONARIO");
-                nome_cozinheiro[i_array_cozinheiro] = input.next();
+                nome_cozinheiro[i_array_cozinheiro] = input.nextLine();
                 System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
                 email_cozinheiro[i_array_cozinheiro] = input.next();
                 System.out.println("DIGITE O CPF DO FUNCIONARIO");
@@ -254,7 +256,7 @@ public class ISOCCER_1
             else if(escolha == 7)
             {
                 System.out.println("DIGITE O NOME DO FUNCIONARIO");
-                nome_advogado[i_array_advogado] = input.next();
+                nome_advogado[i_array_advogado] = input.nextLine();
                 System.out.println("DIGITE O E-MAIL DO FUNCIONARIO");
                 email_advogado[i_array_advogado] = input.next();
                 System.out.println("DIGITE O CPF DO FUNCIONARIO");
@@ -269,7 +271,7 @@ public class ISOCCER_1
             else if(escolha == 8)
             {
                 System.out.println("DIGITE O NOME DO JOGADOR");
-                nome_jogador[i_array_jogador] = input.next();
+                nome_jogador[i_array_jogador] = input.nextLine();
                 System.out.println("DIGITE A POSIÇÃO DO JOGADOR");
                 posicao_jogador[i_array_jogador] = input.next();
                 System.out.println("DIGITE O E-MAIL DO JOGADOR");
@@ -304,7 +306,6 @@ public class ISOCCER_1
         Scanner input = new Scanner(System.in);
         System.out.println();
         System.out.println("ESCOLHA UMA OPÇÃO");
-        //System.out.println("SAIR - 0");
         System.out.println("ADICIONAR SOCIO-TORCEDOR - 1");
         System.out.println("EDITAR DADOS SOCIO-TORCEDOR - 2");
         int opcao = input.nextInt();
@@ -330,7 +331,7 @@ public class ISOCCER_1
                 System.out.println("ADIMPLENTE - 1");
                 System.out.println("INADIMPLENTE - 2");
                 condicao_torcedor[i_array_torcedor] = input.nextInt();
-                if(condicao_torcedor[i_array_jogador] == 1)
+                if(condicao_torcedor[i_array_torcedor] == 1)
                 {
                     condicao_torcedor_nome[i_array_torcedor] = "ADIMPLENTE";
                 }
@@ -370,7 +371,7 @@ public class ISOCCER_1
                                 {
                                     condicao_torcedor_nome[i] = "ADIMPLENTE";
                                 }
-                                else
+                                else if(condicao_torcedor[i] == 2)
                                 {
                                     condicao_torcedor_nome[i] = "INADIMPLENTE";
                                 }
@@ -413,7 +414,7 @@ public class ISOCCER_1
             }
         System.out.println();
         System.out.println("SE DESEJAR ALGO MAIS, ESCOLHA UMA DAS OPÇÕES A SEGUIR: ");
-        System.out.println("SAIR - 0");
+        System.out.println("SAIR (VOLTAR PARA MENU PRINCIPAL) - 0");
         System.out.println("ADICIONAR SOCIO-TORCEDOR - 1");
         System.out.println("EDITAR DADOS SOCIO-TORCEDOR - 2");
         System.out.println();
@@ -537,7 +538,7 @@ public class ISOCCER_1
             }
         System.out.println();
         System.out.println("SE DESEJA CONTINUAR EDITANDO OS RECURSOS FÍSICOS, ESCOLHA UMA DAS OPCÕES A SEGUIR: ");
-        System.out.println("SAIR - 0");
+        System.out.println("SAIR (VOLTAR PARA O MENU PRINCIPAL) - 0");
         System.out.println("ÔNIBUS - 1");
         System.out.println("ESTÁDIO - 2");
         System.out.println("CENTRO DE TREINAMENTO - 3");
@@ -573,11 +574,11 @@ public class ISOCCER_1
                 {
                     System.out.println();
                     System.out.println("INFORMAÇÕES SOBRE O TREINADOR: ");
-                    System.out.println("NOME: " + nome_presidente);
-                    System.out.println("E-MAIL: " + email_presidente);
-                    System.out.println("CPF: " + cpf_presidente);
-                    System.out.println("SALÁRIO: " + salario_presidente);
-                    System.out.println("TELEFONE: " + telefone_presidente);
+                    System.out.println("NOME: " + nome_tecnico);
+                    System.out.println("E-MAIL: " + email_tecnico);
+                    System.out.println("CPF: " + cpf_tecnico);
+                    System.out.println("SALÁRIO: " + salario_tecnico);
+                    System.out.println("TELEFONE: " + telefone_tecnico);
                     System.out.println();
                     for(i = 0; i < i_array_jogador; i++)
                     {
@@ -722,11 +723,11 @@ public class ISOCCER_1
                 int adimplentes = 0, inadimplentes = 0;
                 for(i = 0 ; i < i_array_torcedor ; i++)
                 {
-                    if(condicao_jogador[i] == 1)
+                    if(condicao_torcedor[i] == 1)
                     {
                         adimplentes++;
                     }
-                    else if(condicao_jogador[i] == 2)
+                    else if(condicao_torcedor[i] == 2)
                     {
                         inadimplentes++;
                     }
@@ -753,7 +754,7 @@ public class ISOCCER_1
         System.out.println();
         System.out.println("-- MENU RELATÓRIOS -- ");
         System.out.println("RELATÓRIOS, ESCOLHA UMAS DAS OPÇÕES ABAIXO: ");
-        System.out.println("SAIR - 0");
+        System.out.println("SAIR (VOLTAR PARA O MENU PRINCIPAL) - 0");
         System.out.println("FUNCIONÁRIOS - 1");
         System.out.println("RECURSOS FÍSICOS - 2");
         System.out.println("SÓCIO TORCEDOR - 3");

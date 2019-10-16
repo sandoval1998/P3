@@ -1,25 +1,19 @@
-package Introducao;
-
-/**
- *
- * @author sando
- */
 import java.util.Scanner;
-public class ISOCCER_1 
+public class ISOCCER
 {
     //PRESIDENTE
     static String nome_presidente,nome_medico,nome_tecnico;           
     static String email_presidente,email_medico,email_tecnico;             
     static String cpf_presidente,cpf_medico,crm_medico,cpf_tecnico;
     static float salario_presidente,salario_medico,salario_tecnico;
-    static int telefone_presidente,telefone_medico,telefone_tecnico;
+    static String telefone_presidente,telefone_medico,telefone_tecnico;
     
     //PREPARADOR
     static String [] nome_preparador = new String[100];
     static String [] email_preparador = new String[100];
     static String [] cpf_preparador = new String[100];
     static float [] salario_preparador = new float[100];
-    static int [] telefone_preparador = new int[100];
+    static String [] telefone_preparador = new String[100];
     static int i_array_prepar=0;
     
     //MOTORISTA
@@ -28,7 +22,7 @@ public class ISOCCER_1
     static String [] cpf_motorista = new String[100];
     static float [] salario_motorista = new float[100];
     static int [] habilitacao_motorista = new int[100];
-    static int [] telefone_motorista = new int[100];
+    static String [] telefone_motorista = new String [100];
     static int i_array_moto=0;
     
     //COZINHEIRO
@@ -36,7 +30,7 @@ public class ISOCCER_1
     static String [] email_cozinheiro = new String[100];
     static String [] cpf_cozinheiro = new String[100];
     static float [] salario_cozinheiro = new float[100];
-    static int [] telefone_cozinheiro = new int[100];
+    static String [] telefone_cozinheiro = new String[100];
     static int i_array_cozinheiro=0;
     
     //ADVOGADO
@@ -44,7 +38,7 @@ public class ISOCCER_1
     static String [] email_advogado = new String[100];
     static String [] cpf_advogado = new String[100];
     static float [] salario_advogado = new float[100];
-    static int [] telefone_advogado = new int[100];
+    static String [] telefone_advogado = new String[100];
     static int i_array_advogado=0;
     
     //JOGADOR
@@ -53,7 +47,7 @@ public class ISOCCER_1
     static String [] email_jogador = new String[100];
     static String [] cpf_jogador = new String[100];
     static float [] salario_jogador = new float[100];
-    static int [] telefone_jogador = new int[100];
+    static String [] telefone_jogador = new String[100];
     static int [] condicao_jogador = new int[100];
     static String [] condicao_jogador_nome = new String[100];
     static int i_array_jogador=0;
@@ -64,7 +58,7 @@ public class ISOCCER_1
     static String [] endereco_torcedor = new String[100];
     static String [] cpf_torcedor = new String[100];
     static float [] contribuicao_torcedor = new float[100];
-    static int [] telefone_torcedor = new int[100];
+    static String [] telefone_torcedor = new String[100];
     static int [] condicao_torcedor = new int[100];
     static String [] condicao_torcedor_nome = new String[100];
     static String [] tipo_torcedor = new String[100];
@@ -222,7 +216,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
                 salario_presidente = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
-                telefone_presidente = input.nextInt();
+                telefone_presidente = input.next();
                 System.out.println();
             }
             else if(escolha == 2)
@@ -238,7 +232,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
                 salario_medico = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
-                telefone_medico = input.nextInt();
+                telefone_medico = input.next();
                 System.out.println();
             }
             else if(escolha == 3)
@@ -252,7 +246,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE O SALÁRIO DO TÉCNICO");
                 salario_tecnico = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO TÉCNICO");
-                telefone_tecnico = input.nextInt();
+                telefone_tecnico = input.next();
                 System.out.println();
             }
             else if(escolha == 4)
@@ -266,7 +260,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
                 salario_preparador[i_array_prepar] = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
-                telefone_preparador[i_array_prepar] = input.nextInt();
+                telefone_preparador[i_array_prepar] = input.next();
                 System.out.println();
                 i_array_prepar++;
             }
@@ -280,10 +274,10 @@ public class ISOCCER_1
                 cpf_motorista[i_array_moto] = input.next();
                 System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
                 salario_motorista[i_array_moto] = input.nextFloat();
-                System.out.println("DIGITE O NÉMERO DA HABILITAÇÃO DO FUNCIONARIO");
+                System.out.println("DIGITE O NÚMERO DA HABILITAÇÃO DO FUNCIONARIO");
                 habilitacao_motorista[i_array_moto] = input.nextInt();
                 System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
-                telefone_motorista[i_array_moto] = input.nextInt();
+                telefone_motorista[i_array_moto] = input.next();
                 System.out.println();
                 i_array_moto++;
             }
@@ -298,7 +292,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
                 salario_cozinheiro[i_array_cozinheiro] = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
-                telefone_cozinheiro[i_array_cozinheiro] = input.nextInt();
+                telefone_cozinheiro[i_array_cozinheiro] = input.next();
                 System.out.println();
                 i_array_cozinheiro++;
             }
@@ -313,7 +307,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE O SALÁRIO DO FUNCIONARIO");
                 salario_advogado[i_array_advogado] = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO FUNCIONARIO");
-                telefone_advogado[i_array_advogado] = input.nextInt();
+                telefone_advogado[i_array_advogado] = input.next();
                 System.out.println();
                 i_array_advogado++;
             }
@@ -330,7 +324,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE O SALÁRIO DO JOGADOR");
                 salario_jogador[i_array_jogador] = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO JOGADOR");
-                telefone_jogador[i_array_jogador] = input.nextInt();
+                telefone_jogador[i_array_jogador] = input.next();
                 System.out.println("QUAL A CONDIÇÃO DO JOGADOR? ");
                 System.out.println("DEPARTAMENTO MÉDICO - 1");
                 System.out.println("APTO A JOGAR - 2");
@@ -375,7 +369,7 @@ public class ISOCCER_1
                 System.out.println("DIGITE A CONTRIBUIÇÃO DO TORCEDOR");
                 contribuicao_torcedor[i_array_torcedor] = input.nextFloat();
                 System.out.println("DIGITE O TELEFONE DO TORCEDOR");
-                telefone_torcedor[i_array_torcedor] = input.nextInt();
+                telefone_torcedor[i_array_torcedor] = input.next();
                 System.out.println();
                 System.out.println("QUAL A CONDICAO DO TORCEDOR");
                 System.out.println("ADIMPLENTE - 1");
